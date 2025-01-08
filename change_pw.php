@@ -21,6 +21,17 @@ $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 
 $koneksi->close();
+
+/*
+1. Mulai
+2. Cek apakah pengguna sudah login dengan memeriksa session id_pembeli
+   - Jika belum login, arahkan ke halaman login.php
+3. Ambil informasi pengguna (username dan foto profil) dari tabel pembeli berdasarkan id_pembeli
+4. Tampilkan pesan sukses/gagal jika ada di session
+5. Tampilkan form untuk mengubah password dengan input untuk password saat ini, password baru, dan konfirmasi password baru
+6. Tutup koneksi database
+7. Akhiri
+*/
 ?>
 
 <!DOCTYPE html>
