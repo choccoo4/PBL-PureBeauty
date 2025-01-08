@@ -35,6 +35,33 @@ if (isset($_GET['status'])) {
     echo '<div class="alert alert-warning">Terjadi kesalahan. Silakan coba lagi.</div>';
   }
 }
+
+/*
+1. Mulai sesi pengguna.
+2. Cek apakah pengguna sudah login.
+   - Jika belum login, arahkan ke halaman login.
+3. Ambil ID pembeli dari sesi pengguna.
+4. Ambil data produk dalam keranjang berdasarkan ID pembeli.
+   - Data yang diambil: ID produk, nama produk, harga produk, jumlah produk, gambar produk, dan stok produk.
+5. Tampilkan pesan status jika ada (misalnya, jika sukses menambah atau menghapus produk).
+6. Tampilkan tabel keranjang belanja dengan data produk:
+   - Kolom: gambar produk, nama produk, harga produk, jumlah produk, total harga, dan aksi (hapus produk).
+7. Untuk setiap produk dalam keranjang:
+   - Tampilkan gambar produk.
+   - Tampilkan nama produk (potong nama jika terlalu panjang).
+   - Tampilkan harga produk.
+   - Tampilkan jumlah produk.
+   - Hitung dan tampilkan total harga (harga satuan * jumlah).
+   - Tambahkan tombol untuk menghapus produk dari keranjang.
+8. Jika keranjang kosong, tampilkan pesan "Keranjang Anda kosong".
+9. Hitung total harga dari semua produk dalam keranjang.
+10. Tampilkan total harga semua produk dalam keranjang.
+11. Tampilkan tombol untuk melanjutkan ke halaman checkout.
+12. Jika tombol hapus produk ditekan:
+    - Hapus produk dari keranjang dan tampilkan pesan sukses/gagal.
+13. Jika jumlah produk yang ditambahkan melebihi stok yang tersedia, tampilkan toast error dengan pesan yang sesuai.
+14. Akhiri
+*/
 ?>
 
 <!DOCTYPE html>
