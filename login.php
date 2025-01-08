@@ -56,6 +56,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $koneksi->close();
+
+/* 
+1. Mulai
+2. Inisialisasi variabel error_message untuk menyimpan pesan kesalahan
+3. Jika metode permintaan adalah POST:
+   - Ambil username dan password dari form
+   - Cek apakah username ada di tabel pembeli:
+     - Jika ditemukan, verifikasi password menggunakan password_verify()
+       - Jika benar, simpan username dan id_pembeli di session, lalu arahkan ke halaman home.php
+       - Jika salah, tampilkan pesan kesalahan "Password salah"
+   - Jika username tidak ditemukan di pembeli, cek di tabel penjual:
+     - Jika ditemukan, verifikasi password menggunakan password_verify()
+       - Jika benar, simpan username, id_penjual, dan role di session, lalu arahkan ke halaman dashboard1.php
+       - Jika salah, tampilkan pesan kesalahan "Password salah"
+     - Jika username tidak ditemukan, tampilkan pesan kesalahan "Username tidak ditemukan"
+4. Tutup koneksi database dan statement
+5. Akhiri
+*/
 ?>
 
 <!DOCTYPE html>
